@@ -18,9 +18,9 @@ module Auth0
       end
 
       # including initializer in top of klass
-      def self.included(klass)
-        klass.send :prepend, Initializer
-      end
+      # def self.included(klass)
+      #   klass.send :prepend, Initializer
+      # end
 
       def authorization_header(token)
         add_headers('Authorization' => "Bearer #{token}")
